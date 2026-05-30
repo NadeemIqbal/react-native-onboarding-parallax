@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# build output
+lib/
+
+# logs
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# caches
+.jest/
+coverage/
+
+# misc
+.DS_Store
+*.tgz
+
+# local agent / editor settings
+.claude/
+**/.claude/
+
+# example app installs its own deps
+example/node_modules/

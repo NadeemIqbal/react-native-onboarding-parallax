@@ -1,0 +1,59 @@
+{
+  "name": "react-native-onboarding-parallax",
+  "version": "0.1.0",
+  "description": "A parallax onboarding carousel for React Native with per-layer depth, slot-based pages, and first-class RTL and reduced-motion support.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/*.test.ts",
+    "!**/*.test.tsx"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf lib",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "prepare": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "react-native",
+    "onboarding",
+    "parallax",
+    "carousel",
+    "intro",
+    "walkthrough",
+    "swiper",
+    "pager",
+    "animation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadeemIqbal/react-native-onboarding-parallax.git"
+  },
+  "homepage": "https://github.com/NadeemIqbal/react-native-onboarding-parallax#readme",
+  "bugs": {
+    "url": "https://github.com/NadeemIqbal/react-native-onboarding-parallax/issues"
+  },
+  "author": "Nadeem Iqbal <mr_nadeem_iqbal@yahoo.com>",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.70.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/react": "^18.3.12",
+    "@types/react-test-renderer": "^18.3.0",
+    "jest": "^29.7.0",
+    "react": "18.3.1",
+    "react-native": "^0.76.5",
+    "react-test-renderer": "18.3.1",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
+  }
+}
