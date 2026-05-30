@@ -401,7 +401,10 @@ export const ParallaxOnboarding = forwardRef<OnboardingController, ParallaxOnboa
           style={StyleSheet.absoluteFill}
         >
           {pages.map((page, i) => (
-            <View key={i} style={{ width: size.width, height: size.height }}>
+            <View
+              key={i}
+              style={[styles.page, { width: size.width, height: size.height }]}
+            >
               {renderLayer(
                 page.background,
                 page.backgroundFactor ?? -0.2,
@@ -532,6 +535,9 @@ function Dots({ state }: { state: OnboardingRenderState }): ReactNode {
 
 const styles = StyleSheet.create({
   fill: { flex: 1, overflow: 'hidden' },
+  // Clip each page to its own bounds so a layer's parallax drift (or a
+  // deliberately oversized background) can never bleed into the next page.
+  page: { overflow: 'hidden' },
   controlsContainer: { position: 'absolute', left: 0, right: 0, bottom: 0 },
   controlsRow: {
     flexDirection: 'row',

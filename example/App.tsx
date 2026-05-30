@@ -148,6 +148,9 @@ const styles = StyleSheet.create({
     marginBottom: 96,
   },
   content: {
+    // Fill the page width so the text wraps inside the page. Without this the
+    // View shrink-wraps and iOS lets a long line overflow the right edge.
+    alignSelf: 'stretch',
     paddingHorizontal: 32,
     alignItems: 'center',
   },
@@ -161,6 +164,7 @@ const styles = StyleSheet.create({
     marginBottom: 36,
   },
   title: {
+    alignSelf: 'stretch',
     color: '#FFFFFF',
     fontSize: 28,
     fontWeight: '700',
@@ -168,6 +172,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   body: {
+    alignSelf: 'stretch',
     color: 'rgba(255,255,255,0.74)',
     fontSize: 16,
     lineHeight: 24,
